@@ -10,7 +10,7 @@ const UserBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/blog/${userId}/blogs`);
+        const response = await fetch(`https://project-backend-efuz.onrender.com/blog/${userId}/blogs`);
         const data = await response.json();
         if (data.blogs) {
           setBlogs(data.blogs);

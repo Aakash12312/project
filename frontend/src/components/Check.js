@@ -10,7 +10,7 @@ const CheckBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/blog/checkBlog/${id}`, {
+        const response = await fetch(`https://project-backend-efuz.onrender.com/blog/checkBlog/${id}`, {
           credentials: "include",
         });
         const data = await response.json();
@@ -30,7 +30,7 @@ const CheckBlog = () => {
 
   const handleConfirm = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/blog/confirmBlog/${id}`, {
+      const response = await fetch(`https://project-backend-efuz.onrender.com/blog/confirmBlog/${id}`, {
         method: "POST",
         credentials: "include",
       });

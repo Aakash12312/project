@@ -16,7 +16,7 @@ const SearchUser = () => {
       return;
     }
 
-    fetch(`http://localhost:5000/user/search?Name=${searchQuery}`, {
+    fetch(`https://project-backend-efuz.onrender.com/user/search?Name=${searchQuery}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

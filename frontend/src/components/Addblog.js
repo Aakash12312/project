@@ -11,7 +11,7 @@ const AddBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/blog/addBlog", {
+      const response = await fetch("https://project-backend-efuz.onrender.com/blog/addBlog", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

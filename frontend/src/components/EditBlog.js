@@ -9,7 +9,7 @@ const EditBlog = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blog/${id}`, {
+    fetch(`https://project-backend-efuz.onrender.com/blog/${id}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -29,7 +29,7 @@ const EditBlog = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/blog/editBlog/${id}`, {
+    fetch(`https://project-backend-efuz.onrender.com/blog/editBlog/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
