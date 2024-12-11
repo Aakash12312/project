@@ -7,9 +7,9 @@ const checkCookies = require('./middlewares/auth');
 const userRouter = require('./routes/user');
 const blogRouter = require('./routes/blog');
 const Blog = require('./models/blog');
+require('dotenv').config();
 
 const app = express();
-
 mongoose.connect(process.env.MongoDB_URI)
     .then(() => {
         console.log('Connected to MongoDB');
