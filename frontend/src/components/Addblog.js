@@ -7,7 +7,6 @@ const AddBlog = () => {
   const [content, setContent] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
