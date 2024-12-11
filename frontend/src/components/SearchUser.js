@@ -16,7 +16,7 @@ const SearchUser = () => {
       return;
     }
 
-    fetch(`https://project-backend-efuz.onrender.com/user/search?Name=${searchQuery}`, {
+    fetch(`https://project-gilt-sigma-12.vercel.app/user/search?Name=${searchQuery}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

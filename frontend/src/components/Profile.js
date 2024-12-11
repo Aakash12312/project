@@ -7,7 +7,7 @@ const Profile = () => {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
-    fetch("https://project-backend-efuz.onrender.com/user/profile", {
+    fetch("https://project-gilt-sigma-12.vercel.app/user/profile", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: "include", // Include credentials to send the cookie

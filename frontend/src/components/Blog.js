@@ -13,11 +13,11 @@ const Blog = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await fetch(`https://project-backend-efuz.onrender.com/blog/${id}`);
+                const response = await fetch(`https://project-gilt-sigma-12.vercel.app/blog/${id}`);
                 const data = await response.json();
                 setBlog(data.blog);
 
-                const commentsResponse = await fetch(`https://project-backend-efuz.onrender.com/blog/${id}/comments`);
+                const commentsResponse = await fetch(`https://project-gilt-sigma-12.vercel.app/blog/${id}/comments`);
                 const commentsData = await commentsResponse.json();
                 setComments(commentsData.comments);
             } catch (error) {
@@ -29,7 +29,7 @@ const Blog = () => {
 
     const handleSummarize = async () => {
         try {
-            const response = await fetch(`https://project-backend-efuz.onrender.com/blog/${id}/summarize`, {
+            const response = await fetch(`https://project-gilt-sigma-12.vercel.app/blog/${id}/summarize`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
@@ -49,7 +49,7 @@ const Blog = () => {
 
     const handleAnalyzeComments = async () => {
         try {
-            const response = await fetch(`https://project-backend-efuz.onrender.com/blog/${id}/analyzeComments`, {
+            const response = await fetch(`https://project-gilt-sigma-12.vercel.app/blog/${id}/analyzeComments`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
@@ -69,7 +69,7 @@ const Blog = () => {
     const handleAddComment = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`https://project-backend-efuz.onrender.com/blog/${id}/comments`, {
+            const response = await fetch(`https://project-gilt-sigma-12.vercel.app/blog/${id}/comments`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
