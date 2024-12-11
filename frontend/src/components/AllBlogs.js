@@ -8,7 +8,7 @@ const AllBlogs = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch("https://project-gilt-sigma-12.vercel.app/blog/allBlogs");
+                const response = await fetch("http://localhost:5000/blog/allBlogs");
                 const data = await response.json();
                 setBlogs(data.blogs || []);
             } catch (error) {

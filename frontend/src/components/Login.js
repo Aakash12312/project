@@ -24,7 +24,7 @@ const Login = ({ handleLogin }) => {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://project-gilt-sigma-12.vercel.app/user/login", {
+      const response = await fetch("http://localhost:5000/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
@@ -48,7 +48,7 @@ const Login = ({ handleLogin }) => {
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://project-gilt-sigma-12.vercel.app/user/signup", {
+      const response = await fetch("http://localhost:5000/user/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(registerData),

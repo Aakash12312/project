@@ -7,7 +7,7 @@ const YourBlogs = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://project-gilt-sigma-12.vercel.app/blog/yourBlogs", {
+    fetch("http://localhost:5000/blog/yourBlogs", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -34,7 +34,7 @@ const YourBlogs = () => {
 
   const deleteBlog = (id) => {
     if (window.confirm("Are you sure you want to delete this blog?")) {
-      fetch(`https://project-gilt-sigma-12.vercel.app/blog/${id}`, {
+      fetch(`http://localhost:5000/blog/${id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

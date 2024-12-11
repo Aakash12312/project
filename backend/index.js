@@ -7,9 +7,9 @@ const checkCookies = require('./middlewares/auth');
 const userRouter = require('./routes/user');
 const blogRouter = require('./routes/blog');
 const Blog = require('./models/blog');
-require('dotenv').config();
 
 const app = express();
+
 mongoose.connect(process.env.MongoDB_URI)
     .then(() => {
         console.log('Connected to MongoDB');
@@ -33,27 +33,6 @@ app.use('/blog', blogRouter);
 // React build folder (frontend)
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Root route serving blogs and user
-app.get("/", async (req, res) => {
-    try {
-        const blogs = await Blog.find({});
-        res.json({ user: req.user, error: null, blogs });
-    } catch (error) {
-        console.error("Error fetching blogs:", error);
-        res.status(500).json({
-            user: req.user,
-            blogs: [],
-            error: "Failed to load blogs.",
-        });
-    }
-});
-
-// Fallback route for React (serves index.html for any unknown route)
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-// Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

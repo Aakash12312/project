@@ -16,7 +16,7 @@ const SearchUser = () => {
       return;
     }
 
-    fetch(`https://project-gilt-sigma-12.vercel.app/user/search?Name=${searchQuery}`, {
+    fetch(`http://localhost:5000/user/search?Name=${searchQuery}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

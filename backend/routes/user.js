@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const User = require('../models/user');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const checkCookies = require('../middlewares/auth');
 const router = Router();

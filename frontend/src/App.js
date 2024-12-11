@@ -20,7 +20,7 @@ const AppContent = ({ isLoggedIn, setIsLoggedIn, userName, setUserName }) => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("https://project-gilt-sigma-12.vercel.app/user/logout", {
+      const response = await fetch("http://localhost:5000/user/logout", {
         method: "GET",
         credentials: "include",
       });

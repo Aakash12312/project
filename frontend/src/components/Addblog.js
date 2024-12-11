@@ -7,10 +7,11 @@ const AddBlog = () => {
   const [content, setContent] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://project-gilt-sigma-12.vercel.app/blog/addBlog", {
+      const response = await fetch("http://localhost:5000/blog/addBlog", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

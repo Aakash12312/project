@@ -15,7 +15,7 @@ const CreateAI = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://project-gilt-sigma-12.vercel.app/blog/AI", {
+      const response = await fetch("http://localhost:5000/blog/AI", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, temperature, language }),
