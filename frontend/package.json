@@ -12,7 +12,7 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "npx react-scripts start",
+    "start": "npm start",
     "build": "npx react-scripts build",
     "test": "npx react-scripts test",
     "eject": "npx react-scripts eject"
