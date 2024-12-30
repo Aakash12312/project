@@ -18,7 +18,6 @@ mongoose.connect(process.env.MongoDB_URI)
         console.error('Error connecting to MongoDB:', error);
     });
 
-// Middleware setup
 app.use(cors({ origin: process.env.FRONTEND_URL || 'http://localhost:3000', credentials: true }));
 
 app.use(express.urlencoded({ extended: true }));
@@ -26,11 +25,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(checkCookies("token"));
 
-// API routes
 app.use('/user', userRouter);
 app.use('/blog', blogRouter);
 
-// React build folder (frontend)
 app.use(express.static(path.join(__dirname, 'build')));
 
 const PORT = process.env.PORT || 5000;
