@@ -44,7 +44,6 @@ userSchema.statics.passmatch = async function (Email, Password) {
 
     
 
-    console.log(abc);
     console.log(user.Password);
 
     const isMatch = await bcrypt.compare(Password, user.Password);
